@@ -24,13 +24,13 @@ Jake VanderPlas
 	* Open ethos well-fit to science
 		* LIGO (gravitational wave) is using Python
 
-![img](img/2017-05-19 09.52.00.jpg)
-![img](img/2017-05-19 09.58.32.jpg)
-![img](img/2017-05-19 09.59.00.jpg)
-![img](img/2017-05-19 10.00.23.jpg)
-![img](img/2017-05-19 10.01.41.jpg)
-![img](img/2017-05-19 10.07.44.jpg)
-![img](img/2017-05-19 10.08.44.jpg)
+![img](img/2017-05-19%2009.52.00.jpg)
+![img](img/2017-05-19%2009.58.32.jpg)
+![img](img/2017-05-19%2009.59.00.jpg)
+![img](img/2017-05-19%2010.00.23.jpg)
+![img](img/2017-05-19%2010.01.41.jpg)
+![img](img/2017-05-19%2010.07.44.jpg)
+![img](img/2017-05-19%2010.08.44.jpg)
 
 
 ## Big picture software testing: unit testing, Lean Startup, and everything in-between
@@ -484,8 +484,8 @@ Jake VanderPlas
 
 [Slide Deck](https://speakerdeck.com/jakevdp/pythons-visualization-landscape-pycon-2017), [Video](https://www.youtube.com/watch?v=FytuB8nFHPQ&t=115s)
 
-![img](img/2017-05-20 16.33.02.jpg)
-![img](img/2017-05-20 16.51.00.jpg)
+![img](img/2017-05-20%2016.33.02.jpg)
+![img](img/2017-05-20%2016.51.00.jpg)
 
 Cluster Centers:
 
