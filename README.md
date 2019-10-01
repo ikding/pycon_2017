@@ -1,3 +1,7 @@
+# PyCon 2017
+
+Notes I took from PyCon 2017 in Portland.
+
 ## The Unexpected Effective of Python in Science
 
 Jake VanderPlas
@@ -19,6 +23,14 @@ Jake VanderPlas
 	* Simplicity & Dynamic Nature: For day-to-day exploration of scientists, speed of exploration is more important than speed of execution
 	* Open ethos well-fit to science
 		* LIGO (gravitational wave) is using Python
+
+![img](img/2017-05-19 09.52.00.jpg)
+![img](img/2017-05-19 09.58.32.jpg)
+![img](img/2017-05-19 09.59.00.jpg)
+![img](img/2017-05-19 10.00.23.jpg)
+![img](img/2017-05-19 10.01.41.jpg)
+![img](img/2017-05-19 10.07.44.jpg)
+![img](img/2017-05-19 10.08.44.jpg)
 
 
 ## Big picture software testing: unit testing, Lean Startup, and everything in-between
@@ -52,11 +64,11 @@ Testing that goes beyond unit test and integration test
 
 #### Property based testing
 
-* e.g. absolute.py: 
+* e.g. absolute.py:
 * Write assertion about the properties of a function
 * Generate random input data that violates these assertions
 * Minimize the example to be as simple as possible
-* `hypothesis`: 
+* `hypothesis`:
 	* powerful test data generation
 	* generate minimal test cases on failure
 	* integrates with `pytest`, etc
@@ -69,7 +81,7 @@ Testing that goes beyond unit test and integration test
 * Coverage guided fuzzer
 * Fast
 * Simple to use
-* Smarter to test all the possibilites of your code, faster than brute force
+* Smarter to test all the possibilities of your code, faster than brute force
 
 #### Stress testing
 
@@ -83,7 +95,7 @@ Testing that goes beyond unit test and integration test
 * Modify the program in a small way
 * RUn your test suite
 * If a test fails, success
-* If no tests pass, utation survives
+* If no tests pass, mutation survives
 * Library: `cosmic-ray`
 	* Takes a long time to run
 
@@ -93,7 +105,7 @@ Ryan Anguiano
 
 [Video](https://www.youtube.com/watch?v=OuhCYGLByJg)
 
-* Don't start a new project with microservices just because you wan tto 
+* Don't start a new project with microservices just because you wan tto
 * Hard to pivot from business standpoint
 * Core of project should be rigidly defined
 * Switch to microservices because you need to, not because you want to.
@@ -106,9 +118,9 @@ Ryan Anguiano
 
 * Breaking up the monolith
 	* Analyze your data flow
-	* concentrate the getting the most obvious pieces like your accounts, locations, things that can be broken off 
+	* concentrate the getting the most obvious pieces like your accounts, locations, things that can be broken off
 
-* Building a migration roadmap
+* Building a migration road map
 	* Evaluate diff tools
 	* Use solutions that best meet your needs
 	* Tools: MANTL, docker, ansible, elasticsearch, kafka..,
@@ -124,7 +136,7 @@ Services and API design
 * Do not make breaking changes to API endpoints
 	* Increment endpoint version or add new point
 	* Always test every older endpoint version
-* Separating data strores
+* Separating data stores
 	* Every database should only be accessed by a single service
 	* If a database needs to be accessed by several logics, wrap it in REST API
 
@@ -141,12 +153,12 @@ DevOps and Infrastructure design
 * Use Terraform and ansible for configuration-based infrastructure
 * Use CI to automate deployments
 
-Logging and anlytics
+Logging and analytics
 
 * Send all logs into data pipeline
 * Send all docker logs into Kafka using logspout
 * Send all syslog into Kafka using Kafka Connect
-* Correlations IDs on all initial actions. Use CIDs in logs and all coummunications between devices.
+* Correlations IDs on all initial actions. Use CIDs in logs and all communications between devices.
 
 ## 5 ways to deploy your Python web app in 2017
 
@@ -154,13 +166,13 @@ Andrew T. Baker, Python web developer at Twilio
 
 [Video](https://www.youtube.com/watch?v=vGphzPLemZE)
 
-#### `ngrok`: 
+#### `ngrok`:
 
 * a tool for secure tunnels to localhost (in a pinch)
-* Pros: 
+* Pros:
 	* fast and easy
 	* handy for demos and hacking on webhooks
-* Cons: 
+* Cons:
 	* Stops when you close your laptop
 	* random domains (unless you pay)
 	* **definitely** doesn't scale
@@ -169,11 +181,11 @@ Andrew T. Baker, Python web developer at Twilio
 
 * Pairs with gunicorn web server for python
 
-* Pros: 
+* Pros:
 	* One app 24/7 for free
 	* Zero server management (don't need to)
 	* Add-ons ecosystem
-* Cons: 
+* Cons:
 	* Scaling is easy but gets pricey
 	* Server customization is hard
 	* Some of the add-ons are better than others
@@ -181,7 +193,7 @@ Andrew T. Baker, Python web developer at Twilio
 #### Serverless
 
 * Your app will be running only when someone use it.
-* Example: AWS lambda (but other cloud poviders has it)
+* Example: AWS lambda (but other cloud providers has it)
 * Pairs with Zappa (wrapper around aws lambda)
 
 Pros:
@@ -201,10 +213,10 @@ Cons:
 * The workhorse of the internet (e.g. EC2 instance, GC compute engine)
 * Pros:
 	* Full control
-	* Sacle as much as your wallet
+	* Scale as much as your wallet
 	* Economical if you are careful
 * Cons:
-	* More work fo ryou
+	* More work for you
 	* There's a lot more to learn
 	* Harder to predict ultimate costs
 
@@ -252,13 +264,13 @@ Challenges of the world:
 
 #### Water
 
-* US EPA WNTR water network resilence: written in Python, code in GitHub
+* US EPA WNTR water network resilience: written in Python, code in GitHub
 * Open Global Glacier Model: 43 open issues
 
 #### Climate
 
 * github.com/cambecc/earth
-* aospy: automated climate data anaysis and management (for atmospheric science)
+* aospy: automated climate data analysis and management (for atmospheric science)
 * The Python-ARM Radar Toolkit
 
 #### Energy
@@ -284,7 +296,7 @@ Tips:
 * always use UTC when working with timestamps
 * Remember that a day is not always made of 24 hours
 * Keep your time zonedb up date date
-* Always test your code gainsit scenarios such as time zone changes
+* Always test your code against scenarios such as time zone changes
 
 * Find a time standard: we use second by convention
 	* UT1
@@ -293,7 +305,7 @@ Tips:
 
 * Further complications:
 	* Time zones
-	* Daylight saving time	
+	* Daylight saving time
 
 * Timestamps vs. Wall Time
 	* `datetime.datetime.now()` doesn't set timezones. Use `datetime.datetime..utc` (?)
@@ -308,7 +320,7 @@ Tips:
 	* Solution 3: Use object and hooks to serialize in JSON (`{'day': 31, 'month': 9 ...}`)
 
 * Time arithmetic
-	* Time 
+	* Time
 	* Stop and think about the real meaning of the operation
 	* Always use UTC
 
@@ -329,8 +341,8 @@ Joseph Leingang
 	* Ranges: you can consider datetime ranges to be continuous. Many operations available:
 		* Containment
 		* Overlaps
-		* Extrac the uppder bound
-		* Compute the intesection
+		* Extract the upper bound
+		* Compute the intersection
 		* Is range empty
 		* ... check out postgres docs
 	* Exclusion
@@ -340,7 +352,7 @@ Joseph Leingang
 	* Under the hood: TemporalModel Declared Attributes
 	* Clock tick: made into a Python ContextManager
 
-* Take Aways:	
+* Take Aways:
 	* If you need to keep history, trade offs apply
 	* For a lot of the models, and a lot of properties, you get A LOT of tables
 	* Doing things in bulk is very challenging
@@ -362,7 +374,7 @@ Jessica Forde
 [Github repo](https://github.com/jzf2101/intro_rl), [Video](https://www.youtube.com/watch?v=k1UuTyW2uFc)
 
 
-## Human Machine collaboration for Imporved Analytical Processes
+## Human Machine collaboration for Improved Analytical Processes
 
 Tony Ojeda
 
@@ -370,10 +382,10 @@ Tony Ojeda
 
 * Follett Education Group
 * Co-founder of District Data Labs
-* Co-author of applied text anaysis with Python
+* Co-author of applied text analysis with Python
 
 * Recent update in AI: can AI automate our jobs? Tony doesn't think this is an appropriate question
-* How ecan we combine human and machine abilities to produce better outcomes than either could on their own? (Not Huamn vs. Machine, but Human + Machine)
+* How can we combine human and machine abilities to produce better outcomes than either could on their own? (Not Human vs. Machine, but Human + Machine)
 * Analytical Process:
 	* Ingesting
 	* Wrangling
@@ -397,7 +409,7 @@ Tony Ojeda
 
 * Designing collaborative process (interfaces for tasks "hand-off")
 	* Example: Create: category aggregations
-		* Tasks: id categorical variables and uinique values
+		* Tasks: id categorical variables and unique values
 		* Natural language understanding
 		* General and/or domain knowledge
 		* Similarity in meaning
@@ -436,7 +448,7 @@ Abstraction in Python:
 * Functions
 * Classes
 
-Pitfulls:
+Pitfalls:
 
 * Leaky abstractions: you try to hide the details but the details somehow still leaks" to the user.
 
@@ -466,11 +478,14 @@ Trick:
 
 * More layers can make things cleaner. (Examples: bokeh charts, bokeh glphs, bokeh JS; SQLAlchemy ORM, SQLAlchemy Core, etc)
 
-## Python Data Visualizaton Landscape
+## Python Data Visualization Landscape
 
 Jake VanderPlas
 
 [Slide Deck](https://speakerdeck.com/jakevdp/pythons-visualization-landscape-pycon-2017), [Video](https://www.youtube.com/watch?v=FytuB8nFHPQ&t=115s)
+
+![img](img/2017-05-20 16.33.02.jpg)
+![img](img/2017-05-20 16.51.00.jpg)
 
 Cluster Centers:
 
@@ -478,7 +493,7 @@ Cluster Centers:
 
 Strengths:
 
-* Designed like Matlib, switching was easy
+* Designed like Matlab, switching was easy
 * Many rendering backends (different file formats)
 * Can reproduce just about any plot (with a bit of effort
 * Well-tested, standard tool for over a decade
@@ -490,20 +505,20 @@ Weaknesses:
 * Poor support for web/interactive graphs
 * Often slow and complicated for large data.
 
-#### Desendents of Matplotlib:
+#### Descendent of Matplotlib:
 
 * `pandas`: lots of default plotting options that simplify boilerplate code
-* `seaborn`: focus on statistical data visualization; wraps around of 
+* `seaborn`: focus on statistical data visualization; wraps around of
 
 #### Javascript:
 
 * Lingua Franca of the web
 * `bokeh`: built with interactivity in mind
-	* Advancage: web view , interactivity. Handles large and/or streaming datasets; imperative and declaritive layer
+	* Advancage: web view , interactivity. Handles large and/or streaming datasets; imperative and declarative layer
 	* Disadv: no vector output; smaller output
-* `plotly`: 
+* `plotly`:
 	* Adv: similar to bokeh
-	* Disadv: Some features reuiqre a paid plan
+	* Disadv: Some features require a paid plan
 
 #### Viualization for larger data
 
@@ -520,7 +535,7 @@ Weaknesses:
 
 #### Altair
 
-* What if instead of passing around pixels, we pass around visualizaton specifications plus data?
+* What if instead of passing around pixels, we pass around visualization specifications plus data?
 * Underlying library: Vega, Vega-lite
 * "Declarative Visualizations"
 
@@ -529,7 +544,7 @@ Weaknesses:
 * Declarative: SQL-like
 * Imperative: Pandas like
 * Vega: itself is a declarative specifications for visualizations, built on D3. (write JSON)
-* Vega-lite: a simpler declarative speficiation aimed at statistical visualization
+* Vega-lite: a simpler declarative specification aimed at statistical visualization
 * Altair: a Python API that creates Vega-lite JSON specifications
 * Coming in Altair 2.0: includes a grammar of interaction
 
@@ -548,16 +563,16 @@ Jiaqi Liu
 
 * aka edit distance
 * Damerau-Levenshtein: also consider transpositions
-* Pitfull: comparing addresses
+* Pitfall: comparing addresses
 * Cons: pairwise comparison; might need customization (e.g. addresses)
 
 #### N-Gram/Trigram
 
-* Compare the set intersection of n-gram of two strings 
+* Compare the set intersection of n-gram of two strings
 * Postgres has trigram build in
-* You can also build cosine simularity algorithms on top of trigrams
+* You can also build cosine similarity algorithms on top of trigrams
 * To speed up in postgres: gist and gin indexes for trigrams
-* Pros: more context! 
+* Pros: more context!
 * Cons: slower - need to calculate n-gram for each string
 
 #### More context:
@@ -585,14 +600,14 @@ Three steps of probability
 1. Prior distribution: quantifies the uncertainty in latent variables
 	* Likelihood function: condition our model on the observed data
 1. Infer values for latent variables
-	* Probalistic programiing abstracts the inference procedure
+	* Probabilistic programmiing abstracts the inference procedure
 1. Check your models
 
-Probablistic Programming is not new. Before Python:
+Probabilistic Programming is not new. Before Python:
 
 * WinBUGS: closed source, objective pascal
 * PyMC3: started in 2003
-	* PP frameowrk for fitting arbitrary probability models
+	* PP framework for fitting arbitrary probability models
 	* Based on theano
 	* Implements next generation Bayesian inference methods
 
@@ -600,7 +615,7 @@ MCMC: simulates a markov chain for which some function of interest is unique, in
 
 * Metropolis sampling
 
-* Hamiltonian Monte Carlo: uses a physical anolaogy a frictionless particle moving on a hyper surface. Require auxiliary variables (position and momentum) to be set.
+* Hamiltonian Monte Carlo: uses a physical analogy a frictionless particle moving on a hyper surface. Require auxiliary variables (position and momentum) to be set.
 * Variational inference: good for big datasets. Take some known distribution to approximate for unknown distribution.
 
 References:
@@ -641,7 +656,7 @@ Managed Kafak-like services:
 Kafka pipeline architectuer
 
 * Each applicaton source is a separate "topic" in kafak stream
-* Each consumer 
+* Each consumer
 
 Tips & Tricks:
 
@@ -649,9 +664,9 @@ Tips & Tricks:
 	* Schema validations: avro, thrift, protocol buffers
 	* They ended up using Avro. Multiple language support, dynamic and static bindings, automatic corss-grading, compact binary serialization
 * Enforce schemas at produce time (at data creation)
-	* Topic metadata: 
-		* given a topic name, what schema are in this topic? 
-		* how do we resolve duplicates? What fields uniquely ID a record? 
+	* Topic metadata:
+		* given a topic name, what schema are in this topic?
+		* how do we resolve duplicates? What fields uniquely ID a record?
 		* What field and logic let us choose among or merge multiple versions?
 		* What tells us that the data is correct?
 
@@ -660,7 +675,7 @@ Components / Tooling that they build in house:
 * Metadata Registry API
 * Producer / Consumer library: accepts avro object, conform the schema, and serialize / deserialize the object according the the schema
 
-#### producer systems: 
+#### producer systems:
 
 PHP, Ruby, Node Snowflake... -> REST + JSON to producer API -> Kafka
 
